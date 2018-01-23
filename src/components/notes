@@ -1,0 +1,15 @@
+this.state = {
+        currentTodo: ""
+        todo: []
+}
+
+hanldeClick(text) {
+    const currentTodo = this.state.todo;
+    this.setState({ todo: currentTodo.push(text) })
+}
+handleChange(value) {
+    this.setState({ currentTodo: value })
+}
+render() {
+
+}
