@@ -10,19 +10,20 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App ">
-        <header className="App-header bg-primary">
+      <div>
+        <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title text-success">Chirp Chirp!</h1>
-        </header>
+          <h1 className="text-success ">Chirp Chirp!</h1>
+        </nav>
         <p className="App-intro">
+        
         </p>
         <div>
           
           <br></br>
           <Forms />
           <br></br> <br></br>
-          {/* <Chirps /> */}
+    
           <br></br>  <br></br>
         </div>
       </div>

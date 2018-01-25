@@ -6,6 +6,7 @@ class Forms extends React.Component {
         super(props);
 
         this.state = {
+            message: '',
             chirps: [{
                 text:"First Chirp! Cheep cheep!",
                 key: 0
@@ -22,7 +23,12 @@ class Forms extends React.Component {
         };
         
     }
-    // handleMessage = () => {}
+    handleClick () {
+        // in this function, we can access this.state.message
+        // this.state.message is always up to date; its value is whatever is typed in the box
+        
+        // we need to "package up" a new chirp into an object literal
+    }
 
     render () {
         return(
@@ -35,10 +41,12 @@ class Forms extends React.Component {
                 onChange = {(event) => { this.setState({ message: event.target.value }) }}
                 />
                 <div>
-                <button className="postBtn text-success m-2">Post! </button>
+                <button className="postBtn text-success m-2"
+                onClick = {(event) => {this.handleClick()}}
+                >Post! </button>
                 </div>
                 </div>
-                <Chirps chirps={this.state.chirps} />
+                <Chirps chirps={this.state.chirps} /> 
             </div>
         );
     }
